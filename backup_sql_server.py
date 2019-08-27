@@ -13,7 +13,6 @@ import os
 
 def backup_mmsql():
     now = datetime.now()
-
     for database in sql_config.DATABASES:
         try:
             backup_directory = sql_config.BASE_DIRECTORY +'/'+ database +'/'+ str(now.year) +'/'+ str(now.month) +'/'+ str(now.day) +'/'
@@ -42,10 +41,11 @@ def backup_mmsql():
             #     sql_config.AWS_BUCKET, 
             #     aws_s3_object
             # )
-            
+            end_time = datetime.now() - now
             mail.send_message(
                 "Backup da base "+ database, 
-                "Backup da base " + database + " no servidor " + sql_config.DATABASE_SERVER + " foi realizado.", 
+                "Backup da base " + database + " no servidor " + sql_config.DATABASE_SERVER + " foi realizado." + 
+                "\n Duração: " + str(end_time), 
                 '#03fc1c'
             )
         except Exception as e:
@@ -54,7 +54,6 @@ def backup_mmsql():
                 backup_directory + "log.txt", 
                 "Error: %s" % e
             )
-
 
 def create_sql_file(database_name, backup_directory, backup_filename):
     file = open(
