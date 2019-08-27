@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-import utilities.mail as mail
+import utilities.notification as mail
 import zipfile
 
 try:

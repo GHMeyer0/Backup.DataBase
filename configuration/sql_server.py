@@ -1,14 +1,14 @@
 
 DATABASES = {
-    'DB1':{
+    'master':{
         'empresa':'Meyer',
     },
-    'DB2':{
+    'tempdb':{
         'empresa':'Helko',
     }
 }
-BASE_DIRECTORY = "C:\Backup"
+BASE_DIRECTORY = "C:/Backup"
 DATABASE_SERVER = 'localhost'
 USERNAME = 'SA '
-PASSWORD = 'Teste@123'
+PASSWORD = 'yourStrong(!)Password'
 AWS_BUCKET = 'mssql-backup'
