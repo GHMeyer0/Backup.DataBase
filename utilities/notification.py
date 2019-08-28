@@ -5,10 +5,12 @@ import requests
 
 from configuration import notification as config
 
-def send_logs(subject,log, msg = ""):
-  msg = msg + "\nOcorreu um erro ao executar o Backup, Favor Verificar! \n"
+def send_logs(subject,log = 0, error = ''):
+  msg = "\nOcorreu um erro ao executar o Backup, Favor Verificar! \n"
   msg = msg + "Segue abaixo os logs do Backup \n \n"
-  msg = msg + open(log, 'r').read()
+  if log != 0:
+    msg = msg + open(log, 'r').read()
+  msg = msg + "\n \n " + error
   send_message(subject, msg, "#fc0303" )
 
 def send_message(subject, msg, color = '#764FA5', notification_channel = config.channel):

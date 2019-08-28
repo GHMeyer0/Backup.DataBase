@@ -10,4 +10,4 @@ toaddrs = 'para'
 
 
 # Configuração do Web Hook
-webhook_url = 'https://slack/hooks/d2TMcX4EAJGxKqkH8ZBpu3dTjW6CcJr'
+webhook_url = 'https://chat.excelenciacobrancas.com.br/hooks/d2TAQwgctBCqxRpx2/SHfoxAa9X5jEo2FYxMEDMcX4EAJGxKqkH8ZBpu3dTjW6CcJr'
