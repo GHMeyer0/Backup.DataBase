@@ -12,3 +12,4 @@ DATABASE_SERVER = 'localhost'
 USERNAME = 'SA '
 PASSWORD = 'yourStrong(!)Password'
 AWS_BUCKET = 'mssql-backup'
+DIAS_RETER_BACKUP = 1
